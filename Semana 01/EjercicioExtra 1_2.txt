@@ -1,0 +1,12 @@
+Cree un algoritmo que represente cómo prepararse para un examen importante. Debe incluir una lista de actividades (leer, repasar, practicar), condiciones como si ya entendió la materia, o si tiene dudas, y un ciclo que se repita hasta sentirse listo
+
+1. Inicio
+2. Si ya entendio la materia y no tiene dudas y se siente listo
+    1. Dejar de estudiar.
+3. Sino,
+    1. Mientras no haya entendido la materia o no se siente listo o tenga dudas.
+        1. Leer
+        2. Repasar
+        3. Practicar
+    2. Dejar de estudiar.
+4. Fin
