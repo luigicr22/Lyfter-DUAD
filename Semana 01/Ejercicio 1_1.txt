@@ -1,0 +1,48 @@
+1. Cree un algoritmo para ver un video en Youtube. Sea lo más especifico posible.
+
+1. Inicio
+2. Encontrar un dispositivo
+    1. Si tiene un dispositivo propio
+        1. Tomarlo o estar cerca de él.
+    2. Sino,
+        1. Pedir prestado un dispositivo
+        2. Tomarlo o estar cerca de él.
+3. Encender el dispositivo
+    1. Si el dispositivo ocupa conectarlo a la corriente.
+        1. Verificar que esté conectactado a la corriente.
+        2. Si no está conectado a la corriente.
+            1. Conectarlo a la corriente.
+    2. Sino, si el dispositivo ocupa bateria
+        1. Verificar el nivel de batería.
+        2. Si la batería está baja.
+            1. Conectarlo al cargador.
+    3. Encender el dispositivo.
+4. Acceder al dispositivo
+    1. Si el dispositivo ocupa realizar un login del usuario
+        1. Mientras el dispositivo ocupe realizar el login del usuario de forma correcta.
+            1. Ingresar las credenciales hasta que sea la correcta.
+    2. Acceder al dispositivo.
+5. Verificar conexión con internet
+    1. Si el dispositivo utiliza datos móviles.
+        1. Conectarse a los datos móviles.
+        2. Verificar que tenga conexión a internet.
+    2. Sino, si utiliza red local.
+        1. Conectar el dispositivo a una red local.
+        2. Verificar que tenga conexión a internet.
+    3. Si no tiene acceso a internet.
+        1. Mientras no tenga acceso a internet.
+            1. Solicitar soporte técnico para resolverlo.
+6. Abrir YouTube
+    1. Si el dispositivo cuenta con un aplicativo de youtube.
+        1. Abrir el aplicativo.
+    2. Sino,
+        1. Abrir el browser y acceder a youtube.com
+7. Seleccionar un video
+    1. Mientras no encuentre el video deseado.
+        1. Buscar el video que desea reproducir.
+    2. Seleccionarlo.
+8. Reproducir video.
+    1. Darle play al video.
+    2. Si el volumen no es el ideal.
+        1. Ajustar el volumen.
+9. Fin

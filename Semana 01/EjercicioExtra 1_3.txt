@@ -1,0 +1,24 @@
+Cree un algoritmo de como se prepara para ir a su viaje de diversión favorito
+
+1. Inicio
+2. Buscar destinos
+    1. Mientras no se tenga un plan seleccionado:
+        1. Buscar destinos.
+        2. Buscar precios
+        3. Buscar atracciones.
+3. Comprar transporte al destino seleccionado.
+    1. Buscar los boletos al destino seleccionado
+    2. Si requiere visa o requiere ETA
+        1. Cumplir con los requisitos.
+    3. Comprar los boletos al destino seleccionado.
+4. Comprar hospedaje
+    1. Mientras no se encuentre un hospedaje adecuado.
+        1. Buscar hospedaje.
+    2. Comprar el hospedaje.
+5. Comprar atracciones.
+    1. Para todas las atracciones seleccionadas
+        1. Buscar la informacion de la atraccion.
+        2. Si requiere entrada:
+            1. Comprar la entrada.
+6. Realizar el viaje.
+7. Fin

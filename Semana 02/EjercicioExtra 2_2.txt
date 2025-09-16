@@ -1,0 +1,11 @@
+Cree un algoritmo que le pida al usuario una velocidad en km/h y la convierta a m/s. Recuerda que 1 km == 1000m y 1 hora == 60 minutos * 60 segundos.
+
+1. Inicio
+2. Definir `velocidad_kmh`
+3. Definir `velocidad_ms`
+4. Mostrar "Ingrese una velocidad en km/h"
+5. Pedir `velocidad_kmh`
+6. `velocidad_ms` = `velocidad_kmh` * 1000 / 3600
+7. Mostrar "La velocidad en m/s es"
+8. Mostrar `velocidad_ms`
+9. Fin
