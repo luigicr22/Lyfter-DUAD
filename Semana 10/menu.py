@@ -1,43 +1,49 @@
 import os
 from feature import actions
+from feature import data
 
 def start_menu ():
+    students = []
     while True:
         os.system('cls')
         print("""
-        1. Ingresar un nuevo estudiante
-        2. Eliminar a un estudiante
-        3. Ver la información de todos los estudiantes
-        4. Ver el top 3 de los estudiantes con la mejor nota promedio
-        5. Ver la nota promedio entre las notas de todos los estudiantes
-        6. Mostrar estudiantes reprobados
-        7. Importar los datos de un archivo CSV previamente exportado
-        8. Exportar todos los datos actuales a un archivo CSV
-        9. Salir
+MENU PRINCIPAL
+    1. Ingresar un nuevo estudiante
+    2. Eliminar a un estudiante
+    3. Ver la información de todos los estudiantes
+    4. Ver el top 3 de los estudiantes con la mejor nota promedio
+    5. Ver la nota promedio entre las notas de todos los estudiantes
+    6. Mostrar estudiantes reprobados
+    7. Importar los datos de un archivo CSV previamente exportado
+    8. Exportar todos los datos actuales a un archivo CSV
+    9. Salir
         """)
         try:
             option = int (input("Seleccione una opción: "))
             match option:
                 case 1:
-                    actions.add_students()
+                    students = actions.add_students(students)
                 case 2:
-                    return 'remove_student'
+                    students = actions.remove_student(students)
                 case 3:
-                    return 'view_students'
+                    actions.view_students(students)
                 case 4:
-                    return 'view_top_students'
+                    actions.view_top_students(students)
                 case 5:
-                    return 'view_average_grades'
+                    actions.view_average_grades(students)
                 case 6:
-                    return 'view_failed_students'
+                    actions.view_failed_students(students)
                 case 7:
-                    return 'import_data'
+                    students_imported = data.import_data()
+                    if students_imported != False:
+                        students = students_imported
                 case 8:
-                    return 'export_data'
+                    data.export_data(students)
                 case 9:
-                    save_before = input("Desea exportar los datos antes de salir? (Presione \"s\" para exportar): ")
-                    if save_before.lower() == 's':
-                        return 'export_data'
+                    save_before = input("Presione \"S\" si desea exportar los datos antes de salir: ")
+                    if save_before.upper() == 'S':
+                        data.export_data(students)
+                        exit()
                     else:
                         exit()
                 case _:

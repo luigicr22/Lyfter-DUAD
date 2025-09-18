@@ -2,6 +2,7 @@ import csv
 import os
 
 def export_data(students):
+    os.system('cls')
     student_headers = ("full_name","section","Español","Inglés","Historia","Ciencias","average_grade")
     try:
         with open ('students.csv', 'w', newline='', encoding='utf-8') as file:
@@ -21,11 +22,12 @@ Ubicacion del archivo:
 Presione cualquier tecla para continuar...""")
         return
     except FileNotFoundError:
-        input("No se encuentra el path especificado. Presione cualquier tecla para continuar...")
+        input("No se encuentra el path especificado.\nPresione cualquier tecla para continuar...")
         return
 
 
 def import_data():
+    os.system('cls')
     students = []
     try:
         with open ('students.csv', 'r', encoding='utf-8') as file:
@@ -42,18 +44,17 @@ def import_data():
                 subjects = ["Español", "Inglés","Historia","Ciencias"]
                 for index in range(len(subjects)):
                     grade_subject ["subject"] = subjects[index]
-                    grade_subject ["grade"] = student_row[subjects[index]]
+                    grade_subject ["grade"] = int(student_row[subjects[index]])
                     grades_list.append(grade_subject.copy())
                 student["grades"]=grades_list
 
-                student["average_grade"]=student_row["average_grade"]
+                student["average_grade"]=float(student_row["average_grade"])
 
                 students.append(student)
-        input("Información importada con éxito. Presione cualquier tecla para continuar...")
+        input("Información importada con éxito.\nPresione cualquier tecla para continuar...")
         return students
     except FileNotFoundError:
         input(f"""No se encuentra el archivo students.csv en la carpeta:
 {os.getcwd()}
 Presione cualquier tecla para continuar...""")
-        return students
-    
+        return False
