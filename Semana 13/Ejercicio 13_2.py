@@ -4,11 +4,13 @@ class Person:
         self.name = name
     
     def check_args(func):
-        def wrapper(self, age, height):
-            print(f"El argumento ingresado para la edad es: {age}")
-            print(f"El argumento ingresado para el altura es: {height}")
-            if (isinstance(age, (int)) and isinstance(height, (float))):
-                print (f"Se agregó los datos a la persona {func(self, age, height)}")
+        def wrapper(self, *args):
+            all_numbers = True
+            for index, arg in enumerate(args):
+                if not isinstance(arg, (int,float)):
+                    all_numbers = False
+            if all_numbers:
+                print (f"Se agregó los datos a la persona {func(self, *args)}")
             else:
                 print ("Los parámetros deben ser números")
         return wrapper

@@ -3,11 +3,16 @@ from datetime import datetime
 class Math:
     
     def validate_numbers(func):
-        def wrapper(cls, a, b):
-            if not (isinstance(a, (int, float)) and isinstance(b, (int, float))):
-                print("Ambos argumentos deben ser números.")
+        def wrapper(cls, *args):
+            all_numbers = True
+            for index, arg in enumerate(args):
+                if not isinstance(arg, (int,float)):
+                    all_numbers = False
+            if all_numbers:
+                return (func(cls, *args))
             else:
-                func(cls, a, b)
+                return print("Ambos argumentos deben ser números.")
+            
         return wrapper
     
     def log_call(func):
@@ -19,8 +24,8 @@ class Math:
         return wrapper
     
     @classmethod
-    @validate_numbers
-    @log_call
+    @validate_numbers 
+    @log_call   
     def multiply(cls, a, b):
         return a * b    
 
