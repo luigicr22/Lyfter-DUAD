@@ -63,7 +63,7 @@ def list_categories(account):
 #Verifica que todos los campos esten llenos
 def check_all_fields_filled (func):
     def wrapper (account, **kwargs):
-            if kwargs['transaction_date'] == '' or kwargs['details'] == '' or kwargs['amount'] == '' or kwargs['category'] == '' or kwargs['transaction_type'] == '':
+            if kwargs['transaction_date'].strip() == '' or kwargs['details'].strip() == '' or kwargs['amount'].strip() == '' or kwargs['category'].strip() == '' or kwargs['transaction_type'].strip() == '':
                     raise Exception ('Debe ingresar todos los valores')
             else:
                 func(account,**kwargs)
@@ -114,12 +114,12 @@ def check_date (str_date_to_check):
 #Verifica si las fechas para el filtro son correctas y devuelve diccionario para filtrar.
 def check_filter(**kwargs):
     filter_to_apply = {}
-    if kwargs['start_date'] == '':
+    if kwargs['start_date'].strip() == '':
         filter_to_apply['start_date'] = date(1900,1,1)
     else:
         filter_to_apply['start_date'] = check_date(kwargs['start_date'])
     
-    if kwargs['end_date'] == '':
+    if kwargs['end_date'].strip() == '':
         filter_to_apply['end_date'] = date.today()
     else:
         filter_to_apply['end_date'] = check_date(kwargs['end_date'])
@@ -127,12 +127,12 @@ def check_filter(**kwargs):
     if filter_to_apply['start_date'] > filter_to_apply['end_date']:
             raise Exception ("La Fecha inicial no puede ser mayor a la fecha final")
 
-    if kwargs['category'] == '':
+    if kwargs['category'].strip() == '':
         filter_to_apply['category'] = 'Todas'
     else:
         filter_to_apply['category'] = kwargs['category']
 
-    if kwargs['type'] == '':
+    if kwargs['type'].strip() == '':
         filter_to_apply['type'] = 'Todas'
     else:
         filter_to_apply['type'] = kwargs['type']
@@ -143,7 +143,7 @@ def check_filter(**kwargs):
 def check_fields_category (func):
     def wrapper (parameter, **kwargs):
             pattern = r'#([A-Fa-f0-9]{6})'
-            if kwargs['category_name'] == '' or kwargs['category_color'] == '':
+            if kwargs['category_name'].strip() == '' or kwargs['category_color'].strip() == '':
                 raise Exception ('Debe ingresar todos los valores')
             elif not re.match (pattern,kwargs['category_color']):
                 raise Exception ('El color debe tener formato hexadecimal, por ejemplo: #FF00FF')
