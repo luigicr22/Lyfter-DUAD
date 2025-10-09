@@ -1,5 +1,7 @@
 from datetime import date
-from feature.objects import Transaction
+from feature.objects import Transaction, Category
+from feature.persistence import save_account
+import re
 
 #Devuelve la lista de todas las transacciones para ser impresa en la interface
 def all_transactions(account):
@@ -136,3 +138,31 @@ def check_filter(**kwargs):
         filter_to_apply['type'] = kwargs['type']
 
     return filter_to_apply
+
+
+def check_fields_category (func):
+    def wrapper (parameter, **kwargs):
+            pattern = r'#([A-Fa-f0-9]{6})'
+            if kwargs['category_name'] == '' or kwargs['category_color'] == '':
+                raise Exception ('Debe ingresar todos los valores')
+            elif not re.match (pattern,kwargs['category_color']):
+                raise Exception ('El color debe tener formato hexadecimal, por ejemplo: #FF00FF')
+            else:
+                func(parameter,**kwargs)
+                return parameter
+    return wrapper
+
+
+#agrega una nueva categorias
+@check_fields_category
+def new_category (account, **kwargs):
+    new_category = Category(kwargs['category_name'], kwargs['category_color'])
+    account.add_category(new_category)
+    return account
+
+
+#Modifica una categoria
+@check_fields_category
+def modify_category (selected_category, **kwargs):
+    selected_category.update_category(kwargs['category_name'], kwargs['category_color'])
+    return selected_category

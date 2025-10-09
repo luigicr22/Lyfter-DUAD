@@ -1,6 +1,6 @@
 import FreeSimpleGUI as sg
 from feature.objects import Category
-from feature import persistence
+from feature import persistence, features
 
 def category_interface(account, category_name=None):
     
@@ -34,15 +34,18 @@ def category_interface(account, category_name=None):
             window["color_button"].update(default_color = values['category_color'])
         
         elif event == "Aceptar":
-            if category_modify:
-                selected_category.update_category(values['input_category_name'], values['input_category_color'])
-                sg.popup('Categoria Modificada')
-            else:
-                selected_category = Category(values['input_category_name'], values['input_category_color'])
-                account.add_category(selected_category)
-                sg.popup('Categoria Agregada')
-            persistence.save_account(account)
-            break
+            try:
+                if category_modify:
+                    selected_category = features.modify_category(selected_category, category_name=values['input_category_name'],category_color=values['input_category_color'])
+                    sg.popup('Categoria Modificada')
+                else:
+                    account = features.new_category(account, category_name=values['input_category_name'],category_color=values['input_category_color'])
+                    sg.popup('Categoria Agregada')
+                persistence.save_account(account)
+                break
+            except Exception as e:
+                sg.popup(e)
+                continue
     
     window.close()
     return account
