@@ -1,0 +1,40 @@
+Cree un algoritmo que describa su rutina diaria. Use condiciones, condiciones multiples y ciclos.
+
+1. Inicio
+2. Despertarse
+    1. Si la alarma sonó.
+        1. Despertarse
+        2. Bañarse.
+        3. Alistarse.
+3. Desayunar
+    1. Preparar café
+    2. Preparar el desayuno
+    3. Comerselo.
+4. Trabajar
+    1. Por cada caso pendiente o hasta que sea la hora de salida:
+        1. Revisar el caso
+        2. Si el caso tiene un plan de accion y se requiere una llamada
+            1. Agendarla con el cliente.
+        3. Sino, si el caso tiene un plan de accion y no requiere una llamada:
+            1. Enviar un correo al cliente con el plan de accion.
+        4. Sino:
+            1. Enviar un correo de seguimiento al cliente del caso.
+        5. Si es medio dia:
+            1. Calentar el almuerzo.
+            2. Comerselo.
+        6. Si paso 1 hora desde la ultima vez que se puso de pie:
+            1. Caminar 5min
+5. Hacer ejercicios
+    1. Si son las 5:30pm
+        1. Dirigirse al box
+        2. Hacer el WOD.
+        3. Regresar a casa.
+        4. Bañarse.
+        5. Alistarse.
+6. Cenar
+    1. Calentar la cena.
+    2. Comerselo.
+7. Descansar
+    1. Acostarse
+    2. Dormirse.
+8. Fin

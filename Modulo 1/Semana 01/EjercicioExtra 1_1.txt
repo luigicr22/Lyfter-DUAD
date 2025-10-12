@@ -1,0 +1,24 @@
+Cree un algoritmo como preparar una fiesta sorpresa para un amigo o familiar. Considere si la persona está en casa o no, si los invitados ya llegaron o no, qué hacer mientras esperan, y cómo finaliza la fiesta
+
+1. Inicio
+2. Invitar a los amigos
+    1. Escoger una fecha para la fiesta.
+    2. Invitar a los amigos cercanos del cumpleañero.
+3. Comprar las cosas de la fiesta
+    1. Cobrar una cuota a los invitados.
+    2. Ir al supermercado a comprar suministros para la fiesta.
+4. Verificar si el cumpleañero esta en casa
+    1. Si el dia de la fiesta el cumpleañero esta en la casa.
+        1. Invitarlo a salir a pasear.
+    2. Sino:
+        1. Verificar la hora de regreso a la casa.
+5. Verificar si los invitados estan en la casa
+    1. Mientras todos los invitados no hayan llegado:
+        1. Inventar una excusa para que el cumpleañero todavia no llegue a la casa.
+        2. Evitar que el cumpleañero llegue a la casa.
+    2. Hacer que el cumpleañero llegue a la casa.
+6. Celebracion de la fiesta.
+    1. Darle la sorpresa al cumpleañero
+    2. Cantar cumpleaños
+    3. Comer pastel
+7. Fin
