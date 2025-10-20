@@ -1,0 +1,228 @@
+.global-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(230, 230, 230, 0.795);
+    padding: 0;
+    margin: 0;
+}
+
+.table-container{
+    width: 70%;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.divs-conteiner{
+    border:0.25px;
+    border-bottom-style: solid;
+    border-color: rgba(230, 230, 230, 0.795);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    align-items: stretch;
+    display: flex; 
+}
+
+.div-position{
+    width: 10%;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-picture{
+    width: 10%;
+    margin: 0;
+}
+
+.div-picture-top{
+    width: 20%;
+    margin: 0;
+}
+
+.div-move{
+    width: 5%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.div-name{
+    flex:1;
+    padding: 5px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.div-info{
+    width: 6%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.div-award{
+    width: 6%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-lastWks{
+    width: 6%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.div-peak{
+    width: 6%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-weeks{
+    width: 6%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+picture{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.p-position{
+    font-family: Helvetica;
+    font-weight: bolder;
+    font-size: 2em;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.p-name{
+    display: block;
+    font-family: Helvetica;
+    font-weight: bolder;
+    font-size: 1.5em;
+    padding: 0;
+    margin: 0;
+}
+
+.p-artist{
+    display: block;
+    font-family: Helvetica;
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+}
+
+.a-info{
+    text-decoration: none;
+    font-family: Helvetica;
+    font-size: 2em;
+    font-weight:bold;
+    color: rgb(107, 106, 106);
+}
+
+.p-week-peak{
+    font-family: Helvetica;
+    font-weight:lighter;
+    font-size: 1.3em;
+}
+
+.p-week-peak-top{
+    font-family: Helvetica;
+    font-weight:bold;
+    font-size: 2em;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1{
+    font-family: Helvetica;
+    font-weight:bold;
+    font-size: 2.5em;
+}
+
+header p{
+    font-family: Helvetica;
+    font-weight:bold;
+    font-size: 1em;
+}
+header div{
+    background-color: white;
+    width: 45%;
+    height: 1em;
+    margin: 0 20px 0 20px;
+}
+
+.divs-conteiner-header{
+    background-color: rgb(19, 19, 139);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divs-conteiner-header p{
+    color: white;
+    font-family: Helvetica;
+    font-weight:bold;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.div-position-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    padding: 0;
+    margin: 0;
+}
+
+.div-picture-name-header{
+    flex:1;
+}
+
+.div-week-peak-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6%;
+    padding: 0;
+    margin: 0;
+}
