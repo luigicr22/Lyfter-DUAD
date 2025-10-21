@@ -1,0 +1,60 @@
+/*nav.css*/
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1% 0 3% 0;
+    padding: 0;
+    .nav-main{
+        display: flex;
+        align-items: center;
+    }
+    .nav-button{
+        border: none;
+        background-color: azure;
+        height: 60%;
+        margin: 0 2%;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .nav-button:hover, .nav-button:active, .nav-button:focus{
+                border-bottom: 2px solid rgba(255, 30, 0, 0.767);
+            }
+    .nav-button-brand{
+        border: 0;
+        background-color:azure;
+        margin: 2px 2%;
+        padding: 0;
+        img{
+            height: 50px;
+        }
+    }
+    .nav-button-brand:hover, .nav-button-brand:active, .nav-button-brand:focus{
+        border-bottom: 2px solid rgba(255, 30, 0, 0.767);
+        margin: 1px 2%;
+    }
+
+    .nav-search{
+        border: none;
+        background-color: rgba(255, 102, 0, 0.295);
+        height: 1.5em;
+        padding: .2em;
+    }
+
+    .nav-search::placeholder {
+    color: rgba(255, 30, 0, 0.521);
+    font-weight: bolder;
+    font-size: 0.75em;
+    padding-left: 10px;
+    }
+
+    .button-search{
+        border: none;
+        background-color:azure;
+        margin: 2px 0;
+    }
+
+    .button-search:hover{
+        border-bottom: 2px solid rgba(255, 30, 0, 0.767);
+        margin: 0 0;
+    }
+}
