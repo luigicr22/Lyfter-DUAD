@@ -1,0 +1,14 @@
+/*main.css*/
+@import url(nav.css);
+@import url(poster.css);
+@import url(catalog.css);
+@import url(footer.css);
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:azure;
+}
+
+.general-container{
+    width: 90%;
+    margin: 0 5%;
+}

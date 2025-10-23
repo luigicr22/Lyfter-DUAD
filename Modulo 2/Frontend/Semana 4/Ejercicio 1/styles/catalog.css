@@ -1,0 +1,52 @@
+/*catalog.css*/
+main{
+
+    span{
+        h2{
+            font-size: 2.5em;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 0;
+            margin: 3% 0 1% 0;
+        }
+    }
+    .cards-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        align-items: stretch;
+        .cards{
+            background-color: rgb(255, 255, 255);
+            box-shadow: 10px 10px rgba(156, 156, 156, 0.493);
+            width: 25%;
+            padding: 1% 1%;
+            img{
+                width: 100%;
+            }
+            h3{
+                font-size: 1.5em;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            .fruit-price{
+                font-size: 1.25em;
+                color: red;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-weight: bolder;
+            }
+            .button-catalog{
+                    width: 7em;
+                    height: 3em;
+                    font-size: 1em;
+                    border-radius: 5px;
+                    background-color: rgba(255, 30, 0, 0.767);
+                    border: 1px solid rgb(0, 0, 0);
+                    color: white
+                }
+                .button-catalog:hover, .button-catalog:active, .button-catalog:focus{
+                    border-bottom: 2px solid #222222;
+                    background-color: rgb(255, 0, 0);
+                }
+
+        }
+    }
+}
