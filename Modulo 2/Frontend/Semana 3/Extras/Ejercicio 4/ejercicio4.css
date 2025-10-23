@@ -1,0 +1,34 @@
+
+.cards-container{
+    display: flex;
+    justify-content: center;;
+}
+
+.animal-container{
+    width: 33%;
+    padding: 1%;
+    margin: 2%;
+    background-color: rgba(240, 240, 240, 0.863);
+    box-shadow: 5px 5px rgb(156, 156, 156);
+    transition: background-color 1s ease;
+}
+
+.animal-container:hover{
+    transform: scale(1.05);
+    background-color: rgba(152, 180, 184, 0.774);
+}
+img{
+  width: 100%;
+}
+
+h1{
+    font-family:'Franklin Gothic Medium';
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: rgba(168, 168, 168, 0.747);
+}

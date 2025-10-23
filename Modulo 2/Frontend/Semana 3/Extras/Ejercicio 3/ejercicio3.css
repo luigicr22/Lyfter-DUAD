@@ -1,0 +1,49 @@
+.general-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header{
+    width: 100%;
+    text-align: center;
+}
+
+.section-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 30%;
+    padding: 0 1em;;
+}
+
+@media screen and (min-width: 1400px) {
+    .section-container{
+        flex-wrap:nowrap;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .section-container{
+        flex-wrap:wrap;
+    }
+    section{
+        flex: 1 1 40%;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .section-container{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+}
