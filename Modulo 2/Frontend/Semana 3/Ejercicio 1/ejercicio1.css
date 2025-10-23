@@ -1,0 +1,86 @@
+.global-container {
+    background-color: rgb(85, 87, 206);
+    display: flex;
+    padding: 25px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container{
+    background-color: white;
+    border-radius: 30px;
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+form {
+    width: 90%;
+    padding: 5%;
+
+}
+
+input
+{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 30px 0;
+    padding: 1em 1em;
+    font-family: Helvetica;
+    font-size: 1em;
+    height: 4em;
+    background-color: rgb(226, 226, 245);
+    border: none;
+    border-radius: 5px;
+    color:rgb(63, 63, 63);
+}
+
+select,
+textarea{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 30px 0;
+    padding: 1em 1em;
+    font-family: Helvetica;
+    font-size: 1em;
+    color: #808080;
+    height: 4em;
+    background-color: rgb(226, 226, 245);
+    border: none;
+    border-radius: 5px;
+}
+
+.input-submit{
+    background-color: rgb(85, 87, 206);
+    margin: 30px 0;
+    font-family: Helvetica;
+    font-size: 1em;
+    height: 4em;
+    color: white;
+    width: 40%;
+    border-radius: 5px;
+}
+
+p {
+    font-family: Helvetica;
+    font-size: 1em;
+    color: #808080;
+}
+
+h1{
+    font-family: Helvetica;
+    font-size: 2em;
+}
+
+.p-left{
+    text-align: right;
+}
+
+rect {
+    fill: rgb(85, 87, 206);
+}

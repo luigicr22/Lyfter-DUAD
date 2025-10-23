@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="ejercicio1.css" rel="stylesheet" />
+    <title>Modulo 2 Frontend Semana 3</title>
+  </head>
+  <body>
+    <div class="global-container">
+      <div class="form-container">
+        <form action="https://dummyjson.com/test" method="POST">
+          <svg
+            version="1.1"
+            baseProfile="full"
+            width="5%"
+            height="5"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="100%" height="100%" fill="black" />
+          </svg>
+          <h1>Contact us!</h1>
+          <p>Got something to say? Fire away!</p>
+          <input
+            class="input-text"
+            type="text"
+            id="first_name"
+            name="firstName"
+            placeholder="First name*"
+          />
+          <input
+            type="text"
+            id="last_name"
+            name="lastName"
+            placeholder="Last name*"
+          />
+
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Email address*"
+          />
+
+          <select name="type" id="type">
+            <option hidden>What's your message about?*</option>
+            <option value="question">Question</option>
+            <option value="suggestion">Suggestion</option>
+          </select>
+
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Fire away!*"
+          ></textarea>
+
+          <input class="input-submit" type="submit" value="Send my message" />
+          <p class="p-left">Powered by Luis H</p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

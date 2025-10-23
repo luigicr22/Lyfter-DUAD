@@ -1,0 +1,93 @@
+.global-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-container{
+    width: 50%;
+}
+
+.header-container{
+    margin: 0% 5%;
+    text-align: center;
+}
+
+.figures-container{
+
+    text-align: center;
+}
+
+article{
+    text-align: justify;
+    margin: 0% 5%;
+}
+
+aside{
+    float:right;
+    background-color: rgb(245, 187, 80);
+    border-radius: 10px;
+    padding: 25px 15px;
+    width: 45%;
+    height: 125px;
+    margin: 0 0 1.5em 1.5em;
+    text-align: center;
+}
+.p-learn{
+    font-family: Helvetica;
+    font-weight: bold;
+    margin: 0;
+}
+.button-learn{
+    background-color: black;
+    border-radius: 5px;
+    display: block;
+    font-family: Helvetica;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    padding: 1em;
+    width: 25%;
+    margin: 20px 35% ;
+}
+
+.logo_social{
+    width: 2em;
+    margin: 1em;
+}
+
+.logo_social:hover{
+    width: 2.5em;
+    margin: 0.75em;
+}
+
+h1 {
+    font-size: 4em;
+    font-family:'Gill Sans MT';
+}
+
+h2{
+    font-size: 1.9em;
+    font-family: Helvetica;
+    font-weight: 100;
+}
+
+p{
+    font-size: 1.5em;
+    font-family: Helvetica;
+}
+
+.p-header{
+    font-size: 1.1em;
+}
+
+.p-picture{
+    display: block;
+    background-color: rgb(247, 239, 227);
+    margin: 25px 6%;
+    padding: 20px;
+    font-style: italic;
+    font-size: 1.25em;
+}
