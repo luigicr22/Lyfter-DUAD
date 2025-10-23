@@ -1,0 +1,98 @@
+.general-container{
+    border: 1px solid rgb(0, 38, 255);
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    display: flex;
+    margin-left: 3%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(150, 142, 142, 0.158);
+    .user-name{
+        width: 20%;
+        color: rgb(46, 204, 113);
+        font-weight: bold;
+        text-align: right;
+        padding-right: 1em;
+    }
+    .user-login{
+        width: 5%;
+        height: 50px;
+        background-color: rgb(30, 58, 138);
+        color: white;
+    }
+    .user-login:hover{
+        color: rgb(46, 204, 113);
+    }
+    .logo-container{
+        width: 75%;
+        img{
+            height:50px;
+        }
+    }
+}
+
+aside{
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 3%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(150, 142, 142, 0.158);
+    button{
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        padding: 1em;
+        background-color: rgb(30, 58, 138);
+        color: white;
+    }
+    button:hover{
+        color: rgb(46, 204, 113);
+    }
+    
+}
+
+main{
+    margin-left: 3%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .graphic-container{
+        margin: 10px;
+        padding: 20px;
+        border: 1px solid rgb(30, 58, 138);
+
+        text-align: center;
+        align-content: end;
+        img{
+            width: 90%;
+            padding: 10px;
+        }
+    }
+
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    height: 30px;
+    margin-left: 3%;
+    background-color: rgba(150, 142, 142, 0.158);
+    p{
+        color: rgb(46, 204, 113);
+        font-weight: bold;
+    }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
