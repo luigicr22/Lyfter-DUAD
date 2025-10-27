@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modulo 2 Frontend</title>
+  </head>
+  <body>
+    <input type="text" id="task-to-add" />
+    <button onclick="addTask()">Agregar Tarea</button>
+    <ul id="task-list">
+      <li id="template-task">
+        <span></span>
+        <button onclick="deleteTask(this)">Eliminar</button>
+      </li>
+    </ul>
+  </body>
+  <script>
+    const templateTask = document.getElementById("template-task");
+    templateTask.style.display = "None";
+
+    function addTask() {
+      const taskList = document.getElementById("task-list");
+      const task = document.getElementById("task-to-add").value;
+      document.getElementById("task-to-add").value = "";
+
+      const taskItem = templateTask.cloneNode(true);
+      taskItem.style.display = "list-item";
+      taskItem.id = "task-item";
+
+      taskSpan = taskItem.querySelector("span");
+      taskSpan.innerHTML = task;
+
+      taskList.appendChild(taskItem);
+    }
+
+    function deleteTask(button) {
+      const taskToDelete = button.parentElement;
+      const taskList = document.getElementById("task-list");
+
+      taskList.removeChild(taskToDelete);
+    }
+  </script>
+</html>
