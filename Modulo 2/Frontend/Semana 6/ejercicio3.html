@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modulo 2 Frontend</title>
+  </head>
+  <body>
+    <form action="https://dummyjson.com/test" method="POST">
+      <label for="email">Correo:</label>
+      <br />
+      <input type="email" id="email" name="email" />
+      <br />
+
+      <label for="password">Contraseña:</label>
+      <br />
+      <input type="password" id="password" name="password" />
+      <br />
+
+      <label for="name">Nombre:</label>
+      <br />
+      <input type="text" id="name" name="name" />
+      <br />
+
+      <label for="last-name">Apellido:</label>
+      <br />
+      <input type="text" id="last-name" name="last-name" />
+      <br />
+
+      <label for="employee">Empleado:</label>
+      <br />
+      <input type="radio" id="employee-yes" name="employee" value="Si" />
+      <label for="employee-yes">Si</label>
+      <br />
+      <input type="radio" id="employee-no" name="employee" value="No" />
+      <label for="employee-no">No</label>
+      <br />
+
+      <div id="div-job">
+        <label for="job">Empleo:</label>
+        <br />
+        <input type="text" id="job" name="job" />
+        <br />
+      </div>
+
+      <input id="submit-button" type="submit" value="Submit" />
+    </form>
+  </body>
+  <script>
+    const buttonSubmitNo = document.getElementById("employee-no");
+    const buttonSubmitYes = document.getElementById("employee-yes");
+    const divJob = document.getElementById("div-job");
+    divJob.style.display = "None";
+
+    const noExtraSpace = () => {
+      divJob.style.display = "None";
+    };
+
+    const extraSpace = () => {
+      divJob.style.display = "block";
+    };
+
+    buttonSubmitNo.addEventListener("click", noExtraSpace);
+    buttonSubmitYes.addEventListener("click", extraSpace);
+  </script>
+</html>
