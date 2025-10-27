@@ -1,0 +1,112 @@
+.general-grid{
+    width: 75%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0 auto;
+    gap:20px;
+}
+
+.div-header{
+    grid-column: span 4;
+    text-align: center;
+    background-color: rgba(240, 240, 240, 0.863);
+    padding: 20px;
+}
+
+.cards-container{
+    grid-column: span 3;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(240, 240, 240, 0.863);
+
+    .article-container{
+    padding: 1%;
+    margin: 2% 0 0 0;
+    background-color: rgba(172, 172, 172, 0.863);
+    }
+
+    .text-container{
+        background-color: rgba(240, 240, 240, 0.863);
+        text-align: center;
+    }
+
+    img{
+    width: 100%;
+    }
+}
+
+.links-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(240, 240, 240, 0.863);
+
+    a{
+        margin: 1em;
+    }
+}
+
+.footer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    grid-column: span 4;
+}
+.social-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(240, 240, 240, 0.863);
+    margin: 5px;    
+    .logo_social{
+        width: 2em;
+        margin: 1em;
+    }
+    .logo_social:hover{
+        width: 2.5em;
+        margin: 0.75em;
+    }
+}
+
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(240, 240, 240, 0.863);
+    margin: 5px;
+
+    a{
+        margin-bottom: 1em;
+    }
+    p{
+        margin: 0em;
+    }
+}
+
+h1, h2{
+    font-family:'Franklin Gothic Medium';
+    margin: 0 0;
+}
+
+h3{
+    font-family:'Franklin Gothic Medium';
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(11, 3, 53);
+}
+
+html{
+    background-color: rgba(11, 3, 53, 0.5);
+}
+
