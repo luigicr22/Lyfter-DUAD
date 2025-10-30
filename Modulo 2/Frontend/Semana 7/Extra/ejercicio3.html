@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modulo 2 Frontend</title>
+  </head>
+  <body>
+    <div id="div-color">
+      <p id="color-name">No Color</p>
+      <button id="button-color" onclick="changeColor(changeName)">
+        Change Color
+      </button>
+    </div>
+  </body>
+  <script>
+    function changeName(color) {
+      const colorName = document.getElementById("color-name");
+      colorName.innerHTML = color;
+    }
+
+    function changeColor(callbackFunction) {
+      const listColors = [
+        "#FF5733",
+        "#33FF57",
+        "#3357FF",
+        "#F5FF33",
+        "#FF33F6",
+      ];
+      const colorSelected = listColors[Math.floor(Math.random() * 5)];
+      const divColor = document.getElementById("div-color");
+      divColor.style.backgroundColor = colorSelected;
+      callbackFunction(colorSelected);
+    }
+  </script>
+</html>
