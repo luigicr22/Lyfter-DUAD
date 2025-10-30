@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modulo 2 Frontend</title>
+  </head>
+  <body>
+    <div>
+      <button id="add-button">Add Element</button>
+      <button id="clear-button">Clear List</button>
+      <ul id="list">
+        <li>An item</li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    const addButton = document.getElementById("add-button");
+    const clearButton = document.getElementById("clear-button");
+
+    const addItem = () => {
+      const item = document.createElement("li");
+      item.innerHTML = "Another item";
+      const list = document.getElementById("list");
+      list.appendChild(item);
+    };
+
+    const clearList = () => {
+      const list = document.getElementById("list");
+      while (list.hasChildNodes()) {
+        list.removeChild(list.firstChild);
+      }
+    };
+
+    addButton.addEventListener("click", addItem);
+    clearButton.addEventListener("click", clearList);
+  </script>
+</html>
