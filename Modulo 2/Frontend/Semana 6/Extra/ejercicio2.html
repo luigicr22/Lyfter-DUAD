@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modulo 2 Frontend</title>
+  </head>
+  <body>
+    <p id="counter">0</p>
+    <button id="increase">Incrementar</button>
+    <button id="decrease">Decrementar</button>
+  </body>
+  <script>
+    const buttonIncrease = document.getElementById("increase");
+    const buttonDecrease = document.getElementById("decrease");
+
+    const increase = () => {
+      const counter = document.getElementById("counter");
+      let valueCounter = parseInt(counter.innerHTML);
+      valueCounter++;
+      counter.innerHTML = valueCounter;
+    };
+
+    const decrease = () => {
+      const counter = document.getElementById("counter");
+      let valueCounter = parseInt(counter.innerHTML);
+      if (valueCounter > 0) {
+        valueCounter--;
+      }
+      counter.innerHTML = valueCounter;
+    };
+
+    buttonIncrease.addEventListener("click", increase);
+    buttonDecrease.addEventListener("click", decrease);
+  </script>
+</html>
