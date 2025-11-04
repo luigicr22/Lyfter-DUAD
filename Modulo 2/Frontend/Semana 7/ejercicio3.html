@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modulo 2 Frontend</title>
+  </head>
+  <body>
+    <p id="p-color">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum autem
+      architecto aliquam incidunt explicabo nobis asperiores magni enim deleniti
+      consequuntur in totam qui accusantium odit vero, fuga commodi omnis quasi!
+    </p>
+    <button id="buttonColor">Color</button>
+  </body>
+
+  <script>
+    const button = document.getElementById("buttonColor");
+
+    function changeColor() {
+      const listColors = ["red", "blue", "green", "yellow", "cyan", "pink"];
+      const pColor = document.getElementById("p-color");
+      pColor.style.color = listColors[Math.floor(Math.random() * 5)];
+    }
+
+    button.addEventListener("click", changeColor);
+  </script>
+</html>
