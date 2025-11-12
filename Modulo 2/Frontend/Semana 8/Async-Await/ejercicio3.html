@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modulo 2 Frontend</title>
+  </head>
+  <body>
+    <input type="text" id="id-user" />
+    <button onclick="getUser()">Buscar</button>
+    <p id="name"></p>
+    <p id="lastname"></p>
+    <p id="email"></p>
+  </body>
+
+  <script>
+    async function getUser() {
+      const user = document.getElementById("id-user");
+      const path = `https://reqres.in/api/users/${user.value}`;
+      const name = document.getElementById("name");
+      const lastname = document.getElementById("lastname");
+      const email = document.getElementById("email");
+
+      try {
+        const response = await fetch(path, {
+          headers: { "x-api-key": "reqres-free-v1" },
+        });
+        if (response.status === 404) {
+          throw "Usuario no encontrado";
+        }
+        const data = await response.json();
+        user.value = "";
+        name.innerHTML = "Nombre: " + data.data.first_name;
+        lastname.innerHTML = "Apellido: " + data.data.last_name;
+        email.innerHTML = "Email" + data.data.email;
+      } catch (error) {
+        name.innerHTML = "Hubo un problema: " + error;
+        user.value = "";
+        lastname.innerHTML = "";
+        email.innerHTML = "";
+      }
+    }
+  </script>
+</html>
