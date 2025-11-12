@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/myprofile.js" defer></script>
+    <link href="styles/myprofile.css" rel="stylesheet" />
+    <title>Pagina de Perfil</title>
+  </head>
+  <body>
+    <div class="general-container">
+      <h1>Perfil Usuario</h1>
+      <form class="form-container">
+        <label for="form-id">ID Usuario:</label>
+        <input type="text" id="form-id" name="form-id" disabled />
+        <label for="form-name">Nombre Completo:</label>
+        <input type="text" id="form-name" name="form-name" disabled />
+        <label for="form-email">Correo Electrónico:</label>
+        <input type="email" id="form-email" name="form-email" disabled />
+        <label for="form-address">Dirección:</label>
+        <input type="text" id="form-address" name="form-address" disabled />
+      </form>
+      <div class="buttons-container">
+        <button id="button-edit">Editar</button>
+        <button id="button-save" disabled>Guardar</button>
+        <button id="button-password" class="button-large">
+          Cambiar Contraseña
+        </button>
+        <button id="button-logout" class="button-large">Cerrar Sesión</button>
+      </div>
+    </div>
+  </body>
+</html>
