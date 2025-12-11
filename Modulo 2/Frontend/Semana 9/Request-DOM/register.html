@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/register.js" defer></script>
+    <link href="styles/register.css" rel="stylesheet" />
+    <title>Página de Registro</title>
+  </head>
+  <body>
+    <div class="general-container">
+      <h1>Registro</h1>
+      <form class="form-container">
+        <input
+          type="text"
+          id="form-name"
+          name="form-name"
+          placeholder="Nombre"
+        />
+        <input
+          type="email"
+          id="form-email"
+          name="form-email"
+          placeholder="Email"
+        />
+        <input
+          type="password"
+          id="form-password"
+          name="form-password"
+          placeholder="Contraseña"
+        />
+        <input
+          type="text"
+          id="form-address"
+          name="form-address"
+          placeholder="Dirección"
+        />
+        <button type="button" id="button-register">Registrarse</button>
+      </form>
+    </div>
+  </body>
+</html>
