@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="script/todolist-task-details.js" defer></script>
+    <script src="script/todolist-category-details.js" defer></script>
+    <script src="script/todolist-navbar.js" defer></script>
+    <script src="script/todolist-main.js" defer></script>
+    <script src="script/todolist-utils.js" defer></script>
+    <script src="script/utils-api.js"></script>
+    <link rel="stylesheet" href="styles/todolist.css" />
+    <title>FocusList</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>FocusList</h1>
+      <div>
+        <a href="about.html">About</a>
+        <span id="user-name">User Name</span>
+        <button id="logout-button">Logout</button>
+      </div>
+    </header>
+
+    <nav>
+      <input placeholder="Busqueda" id="navbar-search" />
+      <button class="buttons-functions" id="new-task-button">
+        Agregar Tarea
+      </button>
+      <button class="buttons-functions" id="categories-button">
+        Categorías
+      </button>
+      <button class="buttons-functions" id="navbar-download">
+        Descargar Listas
+      </button>
+      <button class="buttons-functions" id="navbar-delete-completed">
+        Borrar Completadas
+      </button>
+
+      <h3>Mis Listas</h3>
+      <button id="navbar-alltasks">Todas las Tareas</button>
+      <button id="navbar-pending">Pendientes</button>
+      <button id="navbar-completed">Completadas</button>
+
+      <h3>Por Calendario</h3>
+      <button id="navbar-expired">Vencidas</button>
+      <button id="navbar-today">Hoy</button>
+      <button id="navbar-week">Próximos 7 días</button>
+      <button id="navbar-month">Este Mes</button>
+
+      <h3>Por Categoría</h3>
+      <button id="navbar-with-category">Con categoría</button>
+      <div id="navbar-categories-container"></div>
+    </nav>
+
+    <main id="main-container">
+      <h1 id="main-title"></h1>
+      <h2 id="pending-container-title">Pendientes</h2>
+      <div id="pending-container"></div>
+      <h2 id="completed-container-title">Completadas</h2>
+      <div id="completed-container"></div>
+    </main>
+
+    <aside id="task-details-container">
+      <h2 id="task-details-title"></h2>
+      <label>Título</label>
+      <input type="text" id="task-details-task-title" />
+      <label for="task-details-category">Categoría</label>
+      <select name="category" id="task-details-category"></select>
+      <label>Estado</label>
+      <div id="status-options">
+        <label for="task-details-completed">
+          <input
+            type="radio"
+            name="status"
+            id="task-details-completed"
+            value="completed"
+          />
+          Completada
+        </label>
+        <label for="task-details-pending">
+          <input
+            type="radio"
+            name="status"
+            id="task-details-pending"
+            value="pending"
+          />
+          Pendiente
+        </label>
+      </div>
+      <label>Fecha límite</label>
+      <input type="date" id="task-details-due-date" />
+      <label>Descripción</label>
+      <textarea rows="4" id="task-details-description"></textarea>
+      <button id="task-details-save-button">Guardar</button>
+      <button id="task-details-delete-button">Eliminar</button>
+      <button id="task-details-cancel-button">Cancelar</button>
+    </aside>
+
+    <aside id="categories-container">
+      <div id="categories-list-container">
+        <h2>Categorías</h2>
+        <div id="categories-list"></div>
+        <button id="button-new-category">+ Nueva Categoría</button>
+        <button id="button-cancel-categories-list">Cancelar</button>
+      </div>
+      <div id="category-details-container">
+        <div id="category-details">
+          <label>Nombre</label>
+          <input type="text" id="category-details-name" />
+          <div>
+            <label>Color fondo:</label>
+            <input type="color" id="category-details-color" />
+          </div>
+          <div>
+            <label>Color texto:</label>
+            <input type="color" id="category-details-text-color" />
+          </div>
+        </div>
+        <button id="button-edit-category">Editar</button>
+        <button id="button-save-category">Guardar</button>
+        <button id="button-erase-category">Eliminar</button>
+        <button id="button-cancel-category">Cancelar</button>
+      </div>
+    </aside>
+  </body>
+</html>
