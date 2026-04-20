@@ -5,9 +5,10 @@ DO $$
 		v_factura_exists INTEGER;
 		v_factura_status character varying(30);
 		
-		v_producto_id INTEGER;
-		v_producto_status character varying(30);
-		v_quantity_factura INTEGER;
+		v_producto_id INTEGER [];
+		v_producto_status character varying(30) [];
+		v_quantity_factura INTEGER [];
+		v_index INTEGER;
 
 	BEGIN
 		--Verifique que la factura esté en estado "Pendiente"
@@ -37,16 +38,19 @@ DO $$
 		FROM lyfter_transacciones.factura_items
 		WHERE facturas_id = factura_id;
 
-		IF v_producto_status != 'Pendiente' THEN
-			RAISE EXCEPTION 'Los articulos de la factura ya fueron entregados. Abortando transacción.';
-		END IF;
+		--Verifico status y acualizo inventario de cada producto con esa factura
+		FOR v_index IN 1 .. array_length(v_producto_id, 1) LOOP
+			IF v_producto_status[v_index] != 'Pendiente' THEN
+				RAISE EXCEPTION 'Los articulos de la factura ya fueron entregados. Abortando transacción.';
+			END IF;
+
+			UPDATE lyfter_transacciones.productos
+			SET stock = stock + v_quantity_factura[v_index]
+			WHERE id = v_producto_id[v_index];
+		END LOOP;
 
 		UPDATE lyfter_transacciones.factura_items
 		SET status = 'Cancelada'
 		WHERE facturas_id = factura_id;
-
-		UPDATE lyfter_transacciones.productos
-		SET stock = stock + v_quantity_factura
-		WHERE id = v_producto_id;
 
 END $$;	

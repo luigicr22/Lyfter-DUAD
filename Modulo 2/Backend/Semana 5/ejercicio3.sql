@@ -2,8 +2,9 @@ DO $$
 	DECLARE 
 		factura_id INTEGER = 1;
 		v_factura_exists INTEGER;
-		v_producto_id INTEGER;
-		v_quantity_factura INTEGER;
+		v_producto_id INTEGER [];
+		v_quantity_factura INTEGER [];
+		v_index INTEGER;
 	BEGIN
 		--Verificar que la factura existe en la base de datos.
 		SELECT COUNT(*) INTO v_factura_exists
@@ -18,11 +19,14 @@ DO $$
 		SELECT producto_id, quantity INTO v_producto_id, v_quantity_factura
 		FROM lyfter_transacciones.factura_items
 		WHERE facturas_id = factura_id;
-	
-		UPDATE lyfter_transacciones.productos
-		SET stock = stock + v_quantity_factura
-		WHERE id = v_producto_id;
-		
+
+		--Retorna todos los productos con el mismo factura_id;
+		FOR v_index IN 1 .. array_length(v_producto_id, 1) LOOP 
+			UPDATE lyfter_transacciones.productos
+			SET stock = stock + v_quantity_factura[v_index]
+			WHERE id = v_producto_id[v_index];
+		END LOOP;
+
 		UPDATE lyfter_transacciones.factura_items
 		SET status = 'Retornado'
 		WHERE facturas_id = factura_id;
