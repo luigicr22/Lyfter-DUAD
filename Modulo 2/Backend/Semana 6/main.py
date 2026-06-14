@@ -8,7 +8,7 @@ app = Flask(__name__)
 def get_tasks():
     try:
         filter_tasks = utils.read_tasks()
-        status_filter = request.args.get("status")
+        status_filter = request.args.get("status")        
         if status_filter:
             filter_tasks = list(filter(lambda task: task["status"] == status_filter, filter_tasks))
         return jsonify (filter_tasks),200
@@ -24,7 +24,6 @@ def post_task():
     try:
         new_task = request.json
         if utils.check_fields_task(new_task):
-            print
             new_task['id'] = int(new_task['id'])
             if os.path.exists("tasks.json"):
                 tasks = utils.read_tasks()
