@@ -57,5 +57,5 @@ Las dos formas de integrarse
 
 | Protocolo | Documentacion                                                                                                                                |
 | --------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Push      | [PUSH Communication Protocol SDK Manual](https://studylib.net/doc/27718586/ilide.info-attendance-push-communication-protocol-2020032...?p=5) |
+| Push      | [PUSH Communication Protocol Manual](https://studylib.net/doc/27718586/ilide.info-attendance-push-communication-protocol-2020032...?p=5) |
 | Pull      | [API Reloj - ZKBioModule SDK.pdf](https://es.scribd.com/document/651682355/ZKBioModule-SDK-for-Windows)|
