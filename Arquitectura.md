@@ -39,7 +39,7 @@ class RP,AR internal-link;
 |------|------|------|
 |Camaras usadas|Camara normal + camara Infraroja para verificar profundidad|Camara normal solamente|
 |Identificación|Rostros con movimiento (espera patrones como parpadeo para verificar)|Se puede engañar con fotos o video llamadas (FaceId solamente esta disponible para desbloquear celular)|
-|Usos|Verificación 1:N (1 reloj contra N usuarios)|Verifica 1:1 por medio de FaceId)
+|Usos|Verificación 1:N (1 reloj contra N usuarios)|Verifica 1:1 (Acceso por medio de FaceId)
 
 ### Reloj de Marcas
 
